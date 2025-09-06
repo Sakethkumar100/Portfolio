@@ -1,0 +1,842 @@
+ {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chiguru Saketh Kumar - Portfolio</title>
+
+    <link rel="stylesheet" href="{% static 'portf/global.css' %}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Updated fonts to Iron Man style -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Iron Man arc reactor cursor -->
+    <div class="cursor-arc-reactor">
+        <div class="arc-outer-ring"></div>
+        <div class="arc-middle-ring"></div>
+        <div class="arc-inner-ring"></div>
+        <div class="arc-core">SK</div>
+        <div class="arc-glow"></div>
+    </div>
+    <div class="cursor-particles"></div>
+    
+    <!-- Iron Man HUD background -->
+    <div class="bg-animation">
+        <div class="hud-grid"></div>
+        <div class="tech-lines">
+            <div class="tech-line" style="top: 20%; animation-delay: 0s;"></div>
+            <div class="tech-line" style="top: 40%; animation-delay: 1s;"></div>
+            <div class="tech-line" style="top: 60%; animation-delay: 2s;"></div>
+            <div class="tech-line" style="top: 80%; animation-delay: 3s;"></div>
+        </div>
+        <div class="energy-pulses">
+            <div class="energy-pulse" style="left: 10%; animation-delay: 0s;"></div>
+            <div class="energy-pulse" style="left: 30%; animation-delay: 1.5s;"></div>
+            <div class="energy-pulse" style="left: 50%; animation-delay: 3s;"></div>
+            <div class="energy-pulse" style="left: 70%; animation-delay: 4.5s;"></div>
+            <div class="energy-pulse" style="left: 90%; animation-delay: 6s;"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="signature-logo">SK</div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#roadmap" class="nav-link">Roadmap</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <!-- Added theme toggle button in top-right corner -->
+            <div class="theme-toggle">
+                <button id="themeToggle" class="theme-toggle-btn">
+                    <div class="toggle-slider">
+                        <div class="toggle-icon arc-mode">⚡</div>
+                        <div class="toggle-icon iron-mode">🔥</div>
+                    </div>
+                </button>
+                <span class="theme-label">Arc Reactor</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <!-- Iron Man arc reactor animation behind name -->
+            <div class="hero-arc-reactor">
+                <div class="hero-arc-outer"></div>
+                <div class="hero-arc-middle"></div>
+                <div class="hero-arc-inner"></div>
+                <div class="hero-arc-core"></div>
+            </div>
+            <h1 class="hero-name">Chiguru Saketh Kumar</h1>
+            <div class="role-container">
+                <span class="role-prefix">I'm a </span>
+                <span class="animated-role"></span>
+                <span class="cursor-blink">|</span>
+            </div>
+            <p class="hero-subtitle">Computer Science undergraduate passionate about full-stack development and machine learning</p>
+            
+            <div class="hero-actions">
+                <a href="/static/resume/Chiguru_Saketh_Kumar_Resume.pdf" class="action-btn resume-btn" download>
+                    <i class="fas fa-download"></i>
+                    <span>Download Resume</span>
+                </a>
+                <a href="#contact" class="action-btn contact-btn">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact Me</span>
+                </a>
+            </div>
+            
+            <div class="contact-info-hero">
+                <span><i class="fas fa-envelope"></i> chiguruskp2004@gmail.com</span>
+                <span><i class="fas fa-phone"></i> +91-6281210097</span>
+            </div>
+            
+            <!-- Updated social buttons with hover effects and subtitles -->
+            <div class="social-buttons">
+                <a href="https://www.linkedin.com/in/chsakethkumar/" class="social-btn social-linkedin" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                    <span class="social-subtitle">LinkedIn</span>
+                </a>
+                <a href="https://github.com/Sakethkumar100" class="social-btn social-github" target="_blank">
+                    <i class="fab fa-github"></i>
+                    <span class="social-subtitle">GitHub</span>
+                </a>
+                <a href="https://leetcode.com/u/Saketh1104/" class="social-btn social-leetcode" target="_blank">
+                    <i class="fas fa-code"></i>
+                    <span class="social-subtitle">LeetCode</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="50">0</div>
+                    <div class="stat-label">LeetCode Problems</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="4">0</div>
+                    <div class="stat-label">Major Projects</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="3">0</div>
+                    <div class="stat-label">Internships</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="95">0</div>
+                    <div class="stat-label">Client Satisfaction %</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Computer Science undergraduate with programming experience in Python and full-stack frameworks. I've developed machine learning models and scalable web applications that increased predictive accuracy by 13.4% and reduced query processing time by 40%.</p>
+                    <p>Currently pursuing B.Tech in Computer Science Engineering at SR University, Warangal with a CGPA of 9.32/10.0. My coursework includes Data Structures, Algorithms, Databases, Software Engineering, and Machine Learning.</p>
+                </div>
+                <div class="about-skills-preview">
+                    <div class="skill-tag">Python</div>
+                    <div class="skill-tag">Django</div>
+                    <div class="skill-tag">React</div>
+                    <div class="skill-tag">Machine Learning</div>
+                    <div class="skill-tag">MySQL</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Added Career Roadmap Section -->
+    <section id="roadmap" class="roadmap">
+        <div class="container">
+            <h2 class="section-title">Career Roadmap</h2>
+            <div class="roadmap-timeline">
+                <div class="roadmap-item completed">
+                    <div class="roadmap-marker"></div>
+                    <div class="roadmap-content">
+                        <h3>2022 - Started B.Tech CSE</h3>
+                        <p>Began Computer Science Engineering at SR University</p>
+                        <div class="roadmap-status">Completed</div>
+                    </div>
+                </div>
+                <div class="roadmap-item completed">
+                    <div class="roadmap-marker"></div>
+                    <div class="roadmap-content">
+                        <h3>2024 - First Internship</h3>
+                        <p>Web Development Intern at NIT Warangal</p>
+                        <div class="roadmap-status">Completed</div>
+                    </div>
+                </div>
+                <div class="roadmap-item completed">
+                    <div class="roadmap-marker"></div>
+                    <div class="roadmap-content">
+                        <h3>2024 - Co-founder</h3>
+                        <p>Started Digital Marketing Startup</p>
+                        <div class="roadmap-status">Completed</div>
+                    </div>
+                </div>
+                <div class="roadmap-item current">
+                    <div class="roadmap-marker"></div>
+                    <div class="roadmap-content">
+                        <h3>2025 - Python Development</h3>
+                        <p>Python Development Intern at Logic While</p>
+                        <div class="roadmap-status">Current</div>
+                    </div>
+                </div>
+                <div class="roadmap-item future">
+                    <div class="roadmap-marker"></div>
+                    <div class="roadmap-content">
+                        <h3>2026 - Graduation</h3>
+                        <p>Complete B.Tech with honors</p>
+                        <div class="roadmap-status">Upcoming</div>
+                    </div>
+                </div>
+                <div class="roadmap-item future">
+                    <div class="roadmap-marker"></div>
+                    <div class="roadmap-content">
+                        <h3>2026+ - Full Stack Developer</h3>
+                        <p>Senior Full Stack Developer role at tech company</p>
+                        <div class="roadmap-status">Goal</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="experience-timeline">
+                <div class="experience-item">
+                    <div class="experience-card">
+                        <div class="experience-header">
+                            <h3>Python Development Intern</h3>
+                            <span class="duration">Jan 2025 - June 2025</span>
+                        </div>
+                        <h4>Logic While (Remote)</h4>
+                        <ul>
+                            <li>Constructed 50+ algorithmic questions with automated test scripts, boosting testing efficiency by 40%</li>
+                            <li>Implemented unit testing and integrated it into CI/CD pipelines to guarantee 100% core code coverage</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech">Python</span>
+                            <span class="tech">Unit Testing</span>
+                            <span class="tech">CI/CD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-card">
+                        <div class="experience-header">
+                            <h3>Co-founder & Operations Lead</h3>
+                            <span class="duration">Dec 2024 - Feb 2025</span>
+                        </div>
+                        <h4>Digital Marketing Startup (Remote)</h4>
+                        <ul>
+                            <li>Secured 2 clients generating ₹31K+/month recurring revenue within 3 months of launch</li>
+                            <li>Directed a 5-member team to execute 4 data-driven campaigns, achieving 95% client satisfaction rate</li>
+                            <li>Streamlined processes to cut operational overhead by 25% while delivering projects 15% faster</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech">Leadership</span>
+                            <span class="tech">Digital Marketing</span>
+                            <span class="tech">Operations</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-card">
+                        <div class="experience-header">
+                            <h3>Web Development Intern</h3>
+                            <span class="duration">Jan 2024 - Mar 2024</span>
+                        </div>
+                        <h4>NIT Warangal, Telangana</h4>
+                        <ul>
+                            <li>Designed a real-time student management portal with PHP/MySQL handling 500+ concurrent records</li>
+                            <li>Engineered a role-based access control (RBAC) system with 5 permission tiers to enhance data security</li>
+                            <li>Refactored SQL queries and indexes, slashing average database response time by 30%</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech">PHP</span>
+                            <span class="tech">MySQL</span>
+                            <span class="tech">RBAC</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <!-- Updated with real GitHub links -->
+                            <a href="https://github.com/Sakethkumar100/Trasnlator-django-python-" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Translator Web Application</h3>
+                        <p>Django-based translator app integrating APIs to support multilingual text conversion with 95% translation accuracy. Implemented session handling and caching strategies, reducing API calls by 30%.</p>
+                        <div class="project-tech">
+                            <span>Django</span>
+                            <span>APIs</span>
+                            <span>Caching</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <!-- Updated with real GitHub links -->
+                            <a href="https://github.com/Sakethkumar100/weather_app-Django-" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Weather Forecast Application</h3>
+                        <p>Django-powered weather app fetching live data from OpenWeather API, providing real-time forecasts for 1000+ cities. Optimized API requests and database storage, cutting redundant calls by 25%.</p>
+                        <div class="project-tech">
+                            <span>Django</span>
+                            <span>OpenWeather API</span>
+                            <span>Optimization</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <a href="https://github.com/chiguru-saketh/movie-recommendation" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Movie Recommendation System</h3>
+                        <p>Collaborative filtering engine on 120K+ ratings; attained 85% predictive accuracy and cut response time by 40%. Streamlined vector operations and cosine-similarity calculations to reduce memory consumption by 20%.</p>
+                        <div class="project-tech">
+                            <span>Machine Learning</span>
+                            <span>Python</span>
+                            <span>Collaborative Filtering</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <a href="https://github.com/Sakethkumar100/superstore-eda-project" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Superstore EDA Project</h3>
+                        <p>Analyzed 10K+ sales transactions using Pandas and NumPy to reveal purchasing trends. Created 10+ visualizations that enabled data-driven forecasts predicting a 15% increase in quarterly sales.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Pandas</span>
+                            <span>Data Visualization</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-python"></i></div>
+                            <span>Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-java"></i></div>
+                            <span>Java</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-code"></i></div>
+                            <span>C</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Frameworks & Tools</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-server"></i></div>
+                            <span>Django</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-react"></i></div>
+                            <span>React</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-github"></i></div>
+                            <span>GitHub</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Database & Web</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-database"></i></div>
+                            <span>MySQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                            <span>HTML5</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-css3"></i></div>
+                            <span>CSS3</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements">
+        <div class="container">
+            <h2 class="section-title">Achievements & Certifications</h2>
+            <div class="achievements-grid">
+                <!-- Updated certification badges with real links -->
+                <a href="https://www.credly.com/badges/7ea1d06d-e3c4-4bc9-baa9-2b6b87781a85/public_url" target="_blank" class="achievement-badge cisco">
+                    <div class="badge-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h4>Cisco Python Essentials</h4>
+                    <p>Programming Fundamentals</p>
+                </a>
+                <a href="https://www.credly.com/badges/eb29e5b9-9aaa-4360-a5cc-d1aeefa40aa3/public_url" target="_blank" class="achievement-badge cisco">
+                    <div class="badge-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>Cisco Cybersecurity</h4>
+                    <p>Introduction to Cybersecurity</p>
+                </a>
+                <a href="https://www.credly.com/badges/38300197-cfc6-484b-951a-e06e46c4ad82/public_url" target="_blank" class="achievement-badge cisco">
+                    <div class="badge-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h4>Data Security Essentials</h4>
+                    <p>Cisco Certification</p>
+                </a>
+                <a href="https://www.credly.com/badges/5e86177b-c052-4600-81c5-bff80c34f1ca/public_url" target="_blank" class="achievement-badge microsoft">
+                    <div class="badge-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h4>Azure AI Fundamentals</h4>
+                    <p>Microsoft Certification</p>
+                </a>
+                <div class="achievement-badge award">
+                    <div class="badge-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h4>SRU Innovation Challenge</h4>
+                    <p>Finalist 2023</p>
+                </div>
+                <div class="achievement-badge leetcode">
+                    <div class="badge-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h4>LeetCode Solutions</h4>
+                    <p>50+ Problems Published</p>
+                </div>
+                <div class="achievement-badge hackerrank">
+                    <div class="badge-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h4>HackerRank Python</h4>
+                    <p>Python Badge Earned</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <!-- Updated with real LinkedIn URL -->
+                        <span>chiguruskp2004@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+91-6281210097</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <!-- Updated with real GitHub URL -->
+                        <span>linkedin.com/in/chsakethkumar</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <span>github.com/Sakethkumar100</span>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-social">
+                    <h4>Connect With Me</h4>
+                    <div class="footer-social-links">
+                        <!-- Updated footer social links with real URLs -->
+                        <a href="https://www.linkedin.com/in/chsakethkumar/" class="footer-social-link linkedin" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/Sakethkumar100" class="footer-social-link github" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://leetcode.com/u/Saketh1104/" class="footer-social-link leetcode" target="_blank">
+                            <i class="fas fa-code"></i>
+                            <span>LeetCode</span>
+                        </a>
+                        <a href="mailto:chiguruskp2004@gmail.com" class="footer-social-link email">
+                            <i class="fas fa-envelope"></i>
+                            <span>Email</span>
+                        </a>
+                        <a href="tel:+916281210097" class="footer-social-link phone">
+                            <i class="fas fa-phone"></i>
+                            <span>Phone</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-quote">
+                    <p>"Sometimes you gotta run before you can walk." - Tony Stark</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Chiguru Saketh Kumar. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const roles = [
+            "Full Stack Developer",
+            "Python Developer", 
+            "Machine Learning Enthusiast",
+            "Problem Solver",
+            "Co-founder",
+            "Innovation Challenge Finalist"
+        ];
+        
+        const cursorArcReactor = document.querySelector('.cursor-arc-reactor');
+        const particleContainer = document.querySelector('.cursor-particles');
+        
+        document.addEventListener('mousemove', (e) => {
+            cursorArcReactor.style.left = e.clientX + 'px';
+            cursorArcReactor.style.top = e.clientY + 'px';
+            
+            // Create arc reactor energy particles
+            if (Math.random() < 0.15) {
+                createArcParticle(e.clientX, e.clientY);
+            }
+        });
+        
+        function createArcParticle(x, y) {
+            const particle = document.createElement('div');
+            particle.className = 'arc-particle';
+            particle.style.left = x + 'px';
+            particle.style.top = y + 'px';
+            particle.style.setProperty('--random-x', (Math.random() - 0.5) * 2);
+            particle.style.setProperty('--random-y', (Math.random() - 0.5) * 2);
+            
+            document.body.appendChild(particle);
+            
+            setTimeout(() => {
+                particle.remove();
+            }, 2000);
+        }
+        
+        let currentRoleIndex = 0;
+        let currentCharIndex = 0;
+        let isDeleting = false;
+        const roleElement = document.querySelector('.animated-role');
+        
+        function typeRole() {
+            const currentRole = roles[currentRoleIndex];
+            
+            if (isDeleting) {
+                roleElement.textContent = currentRole.substring(0, currentCharIndex - 1);
+                currentCharIndex--;
+            } else {
+                roleElement.textContent = currentRole.substring(0, currentCharIndex + 1);
+                currentCharIndex++;
+            }
+            
+            let typeSpeed = isDeleting ? 50 : 100;
+            
+            if (!isDeleting && currentCharIndex === currentRole.length) {
+                typeSpeed = 2000;
+                isDeleting = true;
+            } else if (isDeleting && currentCharIndex === 0) {
+                isDeleting = false;
+                currentRoleIndex = (currentRoleIndex + 1) % roles.length;
+            }
+            
+            setTimeout(typeRole, typeSpeed);
+        }
+        
+        // Start typing animation
+        typeRole();
+        
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const increment = target / 100;
+                let current = 0;
+                
+                const updateCounter = () => {
+                    if (current < target) {
+                        current += increment;
+                        counter.textContent = Math.ceil(current);
+                        setTimeout(updateCounter, 20);
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+                
+                updateCounter();
+            });
+        }
+        
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                    
+                    // Trigger counter animation for stats section
+                    if (entry.target.classList.contains('stats-section')) {
+                        animateCounters();
+                    }
+                    
+                    // Animate skill bars
+                    if (entry.target.classList.contains('skills')) {
+                        const skillBars = entry.target.querySelectorAll('.skill-progress');
+                        skillBars.forEach(bar => {
+                            const width = bar.getAttribute('data-width');
+                            setTimeout(() => {
+                                bar.style.width = width + '%';
+                            }, 500);
+                        });
+                    }
+                }
+            });
+        }, observerOptions);
+        
+        // Observe sections for animations
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+        
+        document.querySelectorAll('.social-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                createSparkEffect(e.target, e.clientX, e.clientY);
+            });
+        });
+        
+        function createSparkEffect(element, x, y) {
+            const sparks = 8;
+            const color = getComputedStyle(element).backgroundColor;
+            
+            for (let i = 0; i < sparks; i++) {
+                const spark = document.createElement('div');
+                spark.className = 'spark';
+                spark.style.backgroundColor = color;
+                spark.style.left = x + 'px';
+                spark.style.top = y + 'px';
+                
+                const angle = (i / sparks) * Math.PI * 2;
+                const velocity = 50 + Math.random() * 50;
+                const vx = Math.cos(angle) * velocity;
+                const vy = Math.sin(angle) * velocity;
+                
+                spark.style.setProperty('--vx', vx + 'px');
+                spark.style.setProperty('--vy', vy + 'px');
+                
+                document.body.appendChild(spark);
+                
+                setTimeout(() => {
+                    spark.remove();
+                }, 1000);
+            }
+        }
+        
+        // Contact form handling
+        document.getElementById('contactForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData);
+            
+            try {
+                const response = await fetch('/contact/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+                    },
+                    body: JSON.stringify(data)
+                });
+                
+                const result = await response.json();
+                
+                if (result.status === 'success') {
+                    alert('Message sent successfully!');
+                    e.target.reset();
+                } else {
+                    alert('Failed to send message. Please try again.');
+                }
+            } catch (error) {
+                alert('Failed to send message. Please try again.');
+            }
+        });
+        
+        // Smooth scrolling for navigation
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        document.querySelector('.contact-btn').addEventListener('click', (e) => {
+            e.preventDefault();
+            const contactSection = document.querySelector('#contact');
+            contactSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        });
+
+        const themeToggle = document.getElementById('themeToggle');
+        const themeLabel = document.querySelector('.theme-label');
+        const body = document.body;
+        
+        // Load saved theme or default to arc-reactor
+        const savedTheme = localStorage.getItem('portfolio-theme') || 'arc-reactor';
+        body.setAttribute('data-theme', savedTheme);
+        updateThemeLabel(savedTheme);
+        
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'arc-reactor' ? 'iron-man' : 'arc-reactor';
+            
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('portfolio-theme', newTheme);
+            updateThemeLabel(newTheme);
+            
+            // Add toggle animation
+            themeToggle.classList.add('toggling');
+            setTimeout(() => {
+                themeToggle.classList.remove('toggling');
+            }, 300);
+        });
+        
+        function updateThemeLabel(theme) {
+            themeLabel.textContent = theme === 'arc-reactor' ? 'Arc Reactor' : 'Iron Man';
+        }
+    </script>
+</body>
+</html>
